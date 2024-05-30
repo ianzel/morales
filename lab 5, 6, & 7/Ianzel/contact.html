@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact System</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        form {
+            max-width: 400px;
+            margin: 0 auto;
+        }
+        input[type="text"], input[type="email"], input[type="tel"] {
+            width: 100%;
+            padding: 20px;
+            margin: 30px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        input[type="submit"] {
+            background-color: hsl(192, 93%, 55%);
+            color: white;
+            padding: 10px 30px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            float: right;
+        }
+        input[type="submit"]:hover {
+            background-color: hsl(199, 86%, 54%);
+        }
+        .pagination {
+            max-width: 400px;
+            margin-top: 20px; /* Margin-top set to 20px to separate from form */
+            padding-left: 0; /* Remove default padding */
+            list-style: none; /* Remove default list styling */
+        }
+        .pagination .page-item {
+            display: inline;
+            margin-right: 10px; /* Adjust margin between pagination items */
+        }
+        .pagination .page-link {
+            color: #000;
+            text-decoration: none;
+            padding: 8px 16px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .pagination .page-link:hover {
+            background-color: #f0f0f0;
+        }
+        .pagination .page-item.disabled .page-link {
+            color: #aaa;
+            cursor: not-allowed;
+        }
+    </style>
+</head>
+<body>
+
+<h2>Add Contact</h2>
+
+<form onsubmit="return showAlert()">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required>
+
+    <label for="phone">Phone:</label>
+    <input type="tel" id="phone" name="phone" required pattern="[0-9]{10}">
+
+    <input type="submit" value="Add Contact">
+</form>
+
+<nav aria-label="Page navigation example" class="pagination">
+    <ul class="pagination">
+        <li class="page-item">
+            <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
+        </li>
+        <li class="page-item"><a class="page-link" href="image.html">1</a></li>
+        <li class="page-item"><a class="page-link" href="login.html">2</a></li>
+        <li class="page-item"><a class="page-link" href="contact.html">3</a></li>
+        <li class="page-item disabled">
+            <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Next</a>
+        </li>
+    </ul>
+</nav>
+
+<script>
+    function showAlert() {
+        alert("Contact added successfully!");
+        return true; // Allow the form to be submitted
+    }
+</script>
+
+</body>
+</html>

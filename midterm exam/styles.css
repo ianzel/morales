@@ -1,0 +1,112 @@
+/* Reset default margin and padding */
+body, h1, h2, h3, p, ul, li {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSGFtbZYhV6uVPMs09vvU2Gr3POXg58ohciQupkJfxsjA&s'); /* Replace 'background-image.jpg' with the path to your background photo */
+  background-size: cover; /* Cover the entire viewport */
+  background-position: center; /* Center the background image */
+  color: #52595D; /* Text color */ Blend the background image with the background color */
+}
+
+header {
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background for better readability */
+  color: #f9f9f9; /* Blend the background image with the background color */
+  text-align: center;
+  padding: 20px 0;
+  border-style: solid;
+  border-radius: 8px;
+  padding: 5px;
+}
+
+nav ul {
+  list-style-type: none;
+  text-align: center;
+  text-color: #98AFC7;
+}
+
+nav ul li {
+  display: inline;
+  margin-right: 10px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #fff; /* Link color */
+}
+
+nav ul li a:hover {
+  color: #ccc; /* Hover color */
+}
+
+section {
+  padding: 20px 20px;
+}
+
+#about {
+  background-color: #A8A9AD; /* Blend the background image with the background color */
+  border-style: ridge
+}
+
+#gallery {
+  background-color: #C9C1C1; /* Blend the background image with the background color */
+  padding: 10px 20px;
+  border-style: double;
+}
+
+#contact {
+  background-color: #A8A9AD; /* Blend the background image with the background color */
+  border-style: ridge
+}
+
+footer {
+  background-color:#B6B6B6; /* Blend the background image with the background color */
+  color: #fff;
+  text-align: center;
+  padding: 10px 0;
+}
+
+/* Add the new CSS rule for adjusting image size */
+.project img {
+  max-width: 15%; /* Ensure the image doesn't exceed its container's width */
+  height: auto; /* Maintain the aspect ratio of the image */
+  display: block; /* Ensure the image behaves as a block element */
+  margin: 0 auto; /* Center the image horizontally within its container */
+  border: 3px solid #000; /* Add a 3px solid black border to each image */
+  border-radius: 10px;
+  padding: 5px;
+}
+
+header h1,
+nav ul li a {
+  color:#EEEEEE; /* Set the text color to white */
+}
+
+/* New CSS rule for background image visibility */
+#about,
+#gallery,
+#contact {
+  background-color: rgba(255, 255, 255, 0.8); /* Set the background color with transparency */
+  background-blend-mode: overlay; /* Blend the background image with the background color */
+}
+
+/* Add the new CSS rule for adjusting image size and hover effect */
+.project img {
+  max-width: 15%; /* Ensure the image doesn't exceed its container's width */
+  height: auto; /* Maintain the aspect ratio of the image */
+  display: block; /* Ensure the image behaves as a block element */
+  margin: 0 auto; /* Center the image horizontally within its container */
+  border: 3px solid #000; /* Add a 3px solid black border to each image */
+  border-radius: 10px;
+  padding: 5px;
+  transition: transform 0.3s ease; /* Add transition effect */
+}
+
+/* Apply hover effect */
+.project img:hover {
+  transform: scale(1.1); /* Scale the image up by 10% on hover */
+  border-color: #fff; /* Change border color on hover */
+}
